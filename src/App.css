@@ -1,42 +1,96 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Estilos para el contenedor de la galería */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16.5%, 1fr));
+  grid-auto-rows: 25%;
+  grid-gap: 5px;
+  width: 100vw;
+  height: 80vh;
+  justify-items: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Estilos para cada imagen */
+.galeria .imagen {
+  border-radius: 0.11rem;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  position: relative; /* Esto permite posicionar la tarjeta en relación con la imagen */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Estilos para la imagen en sí */
+.galeria .imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+/*   border-radius: 2rem; */
+  transition: transform 0.5s ease-in-out; /* Esto crea una transición suave cuando la imagen se expande y se contrae */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Estilos para la imagen seleccionada */
+.galeria .imagen.selected {
+  grid-column: span 2; /* La imagen seleccionada abarcará 2 columnas */
+  grid-row: span 2; /* La imagen seleccionada abarcará 2 filas */
+/*   border-radius: 0.11rem; /* Bordes redondeados para el estilo iOS */ 
+  z-index: 1; /* La imagen seleccionada estará por encima de las demás */
+  transform: scale(1.2); /* Esto expande la imagen seleccionada */
+  transition: transform 0.5s ease-in-out; /* Esto crea una transición suave cuando la imagen se expande y se contrae */
 }
 
+.galeria .imagen.selected img {
+  transform: scale(1.2); /* Esto devuelve la imagen seleccionada a su tamaño original */
+}
+
+/* Estilos para la tarjeta */
 .card {
-  padding: 2em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7); /* Fondo blanco con un poco de transparencia para el efecto de desenfoque */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: none; /* Inicialmente, la tarjeta está oculta */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 2rem; */ /* Bordes redondeados para el estilo iOS */
+  backdrop-filter: blur(10px); /* Desenfoque del fondo para el estilo iOS */
 }
 
-.read-the-docs {
-  color: #888;
+.galeria .imagen:hover .card {
+  display: flex; /* La tarjeta se muestra cuando se pasa el cursor sobre la imagen */
+}
+
+.card img {
+  width: 100% !important;
+  height: 60% !important;
+  object-position: top;
+  border-radius: 2rem 2rem 0rem 0rem;
+}
+
+
+.card h3, .card p {
+  margin: 10px 0;
+}
+
+/* Estilos para el botón de cierre */
+.card button {
+  padding: 10px 20px;
+  background-color: #ff6347; /* Color fuerte para el botón */
+  color: white;
+  border: none;
+  border-radius: 10px; /* Bordes redondeados para el estilo iOS */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #ff4500; /* Cambia el color de fondo cuando se pasa el cursor sobre el botón */
 }
