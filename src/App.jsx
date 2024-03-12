@@ -36,8 +36,8 @@ function App() {
   const [showCard, setShowCard] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const handleMouseEnter = (imagen) => {
-    setSelectedImage(imagen);
+  const handleMouseEnter = (id) => {
+    setSelectedImage(id);
     setShowCard(true);
   };
 
@@ -47,40 +47,40 @@ function App() {
   };
 
   const imagenes = [
-    imagen1,
-    imagen2,
-    imagen3,
-    imagen4,
-    imagen5,
-    imagen6,
-    imagen7,
-    imagen8,
-    imagen9,
-    imagen10,
-    imagen11,
-    imagen12,
-    imagen13,
-    imagen14,
-    imagen15,
-    imagen16,
-    imagen17,
-    imagen18,
-    imagen19,
-    imagen20
+    { id: 1, src: imagen1 },
+    { id: 2, src: imagen2 },
+    { id: 3, src: imagen3 },
+    { id: 4, src: imagen4 },
+    { id: 5, src: imagen5 },
+    { id: 6, src: imagen6 },
+    { id: 7, src: imagen7 },
+    { id: 8, src: imagen8 },
+    { id: 9, src: imagen9 },
+    { id: 10, src: imagen10 },
+    { id: 11, src: imagen11 },
+    { id: 12, src: imagen12 },
+    { id: 13, src: imagen13 },
+    { id: 14, src: imagen14 },
+    { id: 15, src: imagen15 },
+    { id: 16, src: imagen16 },
+    { id: 17, src: imagen17 },
+    { id: 18, src: imagen18 },
+    { id: 19, src: imagen19 },
+    { id: 20, src: imagen20 },
   ];
 
   return (
     <>
     <div className="galeria">
-      {imagenes.map((imagen, index) => (
+      {imagenes.map((imagen) => (
         <div
-          className={`imagen ${selectedImage === imagen ? 'selected' : ''}`}
-          key={index}
-          onMouseEnter={() => handleMouseEnter(imagen)}
+          className={`imagen ${selectedImage === imagen.id ? 'selected' : ''}`}
+          key={imagen.id}
+          onMouseEnter={() => handleMouseEnter(imagen.id)}
           onMouseLeave={handleMouseLeave}
         >
-          <img src={imagen} alt="Imagen" />
-          {showCard && selectedImage === imagen && <Card imagen={selectedImage} onClose={handleMouseLeave} />}
+          <img src={imagen.src} alt="Imagen" />
+          {showCard && selectedImage === imagen.id && <Card imagen={imagen.src} onClose={handleMouseLeave} />}
         </div>
       ))}
     </div>
