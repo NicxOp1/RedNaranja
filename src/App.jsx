@@ -25,8 +25,8 @@ function Card({ imagen, contactMe }) {
   return (
     <div className="card">
       <img src={imagen} alt="Imagen seleccionada" />
-      <h3>Título de la imagen</h3>
-      <p>Descripción de la imagen</p>
+      <h3>Diputado</h3>
+      <p>Lorem ipsum dolor, </p>
       <button onClick={contactMe}>Contáctame</button>
     </div>
   );
