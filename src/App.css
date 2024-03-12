@@ -43,6 +43,7 @@
 
 .galeria .imagen.selected img {
   transform: scale(1.2); /* Esto devuelve la imagen seleccionada a su tamaño original */
+  transition: 1s;
 }
 
 /* Estilos para la tarjeta */
@@ -61,6 +62,7 @@
   align-items: start;
   /* border-radius: 2rem; */ /* Bordes redondeados para el estilo iOS */
   backdrop-filter: blur(10px); /* Desenfoque del fondo para el estilo iOS */
+  z-index: 2;
 }
 
 .galeria .imagen:hover .card {
@@ -110,7 +112,7 @@
 /* Estilos para el botón de cierre */
 .card button {
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 5% 10%;
   background-color: #ff6347; /* Color fuerte para el botón */
   color: white;
   border: none;

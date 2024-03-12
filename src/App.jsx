@@ -43,6 +43,7 @@ function App() {
 
   const handleMouseLeave = () => {
     setShowCard(false);
+    setSelectedImage(null);
   };
 
   const imagenes = [
@@ -79,7 +80,7 @@ function App() {
           onMouseLeave={handleMouseLeave}
         >
           <img src={imagen} alt="Imagen" />
-          {showCard && selectedImage === imagen && <Card imagen={selectedImage} /* onClose={handleMouseLeave} */ />}
+          {showCard && selectedImage === imagen && <Card imagen={selectedImage} onClose={handleMouseLeave} />}
         </div>
       ))}
     </div>
