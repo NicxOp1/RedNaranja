@@ -3,20 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
-.container{
+.container {
     display: flex;
-    height: 100vh;
+    height: 200vh;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     width: 100vw;
     background-color: #2222;
     margin: 0 auto;
 }
-.contenedor{
+.contenedor {
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 60%;
-    width: 50%;
-/*     background-color: #2222; */
+    width: 70%;
 }

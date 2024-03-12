@@ -6,11 +6,11 @@
   grid-gap: 5px;
   width: 100vw;
   height: 80vh;
-  justify-items: center;
-  align-items: center;
   margin: 0;
   padding: 0;
   border-radius: 1rem;
+  align-content: center;
+  justify-content: center;
 }
 
 /* Estilos para cada imagen */
@@ -22,6 +22,8 @@
   margin: 0;
   padding: 0;
   position: relative; /* Esto permite posicionar la tarjeta en relación con la imagen */
+  grid-column: span 1; /* La imagen seleccionada abarcará 2 columnas */
+  grid-row: span 2; /* La imagen seleccionada abarcará 2 filas */
 }
 
 /* Estilos para la imagen en sí */
