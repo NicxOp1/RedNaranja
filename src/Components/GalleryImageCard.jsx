@@ -1,24 +1,24 @@
-import './App.css'
-import imagen1 from './assets/imagen1.png'
-import imagen2 from "./assets/imagen2.png"
-import imagen3 from "./assets/imagen3.png"
-import imagen4 from "./assets/imagen4.png"
-import imagen5 from "./assets/imagen5.png"
-import imagen6 from "./assets/imagen6.png"
-import imagen7 from "./assets/imagen7.png"
-import imagen8 from "./assets/imagen8.png"
-import imagen9 from "./assets/imagen9.png"
-import imagen10 from "./assets/imagen10.png"
-import imagen11 from "./assets/imagen11.png"
-import imagen12 from "./assets/imagen12.png"
-import imagen13 from "./assets/imagen13.png"
-import imagen14 from "./assets/imagen14.png"
-import imagen15 from "./assets/imagen15.png"
-import imagen16 from "./assets/imagen16.png"
-import imagen17 from "./assets/imagen17.png"
-import imagen18 from "./assets/imagen18.png"
-import imagen19 from "./assets/imagen19.png"
-import imagen20 from "./assets/imagen20.png"
+import './galleryImageCard.css'
+import imagen1 from '../assets/imagen1.png'
+import imagen2 from "../assets/imagen2.png"
+import imagen3 from "../assets/imagen3.png"
+import imagen4 from "../assets/imagen4.png"
+import imagen5 from "../assets/imagen5.png"
+import imagen6 from "../assets/imagen6.png"
+import imagen7 from "../assets/imagen7.png"
+import imagen8 from "../assets/imagen8.png"
+import imagen9 from "../assets/imagen9.png"
+import imagen10 from "../assets/imagen10.png"
+import imagen11 from "../assets/imagen11.png"
+import imagen12 from "../assets/imagen12.png"
+import imagen13 from "../assets/imagen13.png"
+import imagen14 from "../assets/imagen14.png"
+import imagen15 from "../assets/imagen15.png"
+import imagen16 from "../assets/imagen16.png"
+import imagen17 from "../assets/imagen17.png"
+import imagen18 from "../assets/imagen18.png"
+import imagen19 from "../assets/imagen19.png"
+import imagen20 from "../assets/imagen20.png"
 
 import { useState } from 'react';
 function Card({ imagen, contactMe }) {
@@ -32,7 +32,7 @@ function Card({ imagen, contactMe }) {
   );
 }
 
-function App() {
+function GalleryImageCard() {
   const [showCard, setShowCard] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -72,7 +72,7 @@ function App() {
   return (
     <>
     <div className="contenedor">
-    <div className="galeria">
+    <div className="galeria" id='galeria'>
       {imagenes.map((imagen) => (
         <div
           className={`imagen ${selectedImage === imagen.id ? 'selected' : ''}`}
@@ -90,4 +90,4 @@ function App() {
   );
 }
 
-export default App;
+export default GalleryImageCard;

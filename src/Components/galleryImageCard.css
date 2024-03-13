@@ -136,3 +136,45 @@
 .card button:hover {
   background-color: #ff4500; /* Cambia el color de fondo cuando se pasa el cursor sobre el botón */
 }
+  /* Estilos para escritorio 2K */
+@media (min-width: 2560px) and (min-height: 1440px) {
+.card button{
+  padding: 5% 5%!important;
+  margin: 0 6%!important;
+}
+}
+/* Estilos para escritorio Full HD */
+ @media (min-width: 1024px) and (min-height: 768px) {
+#galeria {
+    grid-template-columns: repeat(auto-fill, minmax(32%, 1rem))!important;
+    height: 100%;
+}
+}
+  /* Estilos para tablets en orientación horizontal */
+@media (min-width: 768px) and (min-height: 1024px) {
+  .galeria{
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr))!important;
+  }
+  .card p{
+    text-align: left;
+  }
+  .card button{
+    padding: 5% 5%!important;
+    margin: 0 6%!important;
+  }
+}
+  /* Estilos para iPhone 12 Pro Max */
+@media (min-width: 428px) and (max-height: 926px) {
+  .contenedor{
+    height: 100%;
+  }
+.galeria{
+  grid-template-columns: repeat(auto-fill, minmax(80%, 1rem)) !important;
+  height: 100%;
+}
+}
+  /* Estilos para iPhone 7 (Retrato) */
+@media (max-width: 375px) and (max-height: 667px) {
+
+}
+

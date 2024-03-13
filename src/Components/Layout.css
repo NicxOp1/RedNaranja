@@ -27,3 +27,8 @@ h3{
     align-items: center;
     
 }
+@media (min-width: 428px) and (max-height: 926px) {
+    .container{
+      height: 100%;
+    }
+  }
