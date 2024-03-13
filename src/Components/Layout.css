@@ -3,17 +3,27 @@
     padding: 0;
     box-sizing: border-box;
 }
+p,button{
+    font-family: 'Gotham Light', sans-serif;
+
+}
+h3{
+    font-family: 'Gotham Black', sans-serif;
+}
+@font-face {
+    font-family: 'Gotham Black';
+    src: url('./src/fonts/Gotham-Black 2.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'Gotham Light';
+    src: url('./src/fonts/Gotham-Light 2.otf') format('opentype');
+  }
 .container {
     display: flex;
     height: 200vh;
-    justify-content: center;
-    align-items: start;
-    width: 100vw;
     background-color: #2222;
-    margin: 0 auto;
-}
-.contenedor {
-    display: flex;
-    height: 60%;
-    width: 70%;
+    justify-content: center;
+    align-items: center;
+    
 }

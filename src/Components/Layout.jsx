@@ -5,9 +5,7 @@ import "./Layout.css";
 function Layout(props) {
   return (
     <div className="container">
-        <div className="contenedor">
         <App />
-        </div>
     </div>
   );
 }

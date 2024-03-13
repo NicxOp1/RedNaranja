@@ -1,16 +1,24 @@
+.contenedor {
+  display: flex;
+  height: 60%;
+  width: 70%;
+  position: absolute;;
+}
+
 /* Estilos para el contenedor de la galería */
 .galeria {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(16.5%, 1rem));
   grid-auto-rows: 25%;
   grid-gap: 5px;
-  width: 100vw;
+  width: 100%;
   height: 80vh;
   margin: 0;
   padding: 0;
   border-radius: 1rem;
   align-content: center;
   justify-content: center;
+  overflow-y: visible;
 }
 
 /* Estilos para cada imagen */
@@ -20,7 +28,7 @@
   height: 100%;
   overflow: hidden;
   margin: 0;
-  padding: 0;
+  padding:  0;
   position: relative; /* Esto permite posicionar la tarjeta en relación con la imagen */
   grid-column: span 1; /* La imagen seleccionada abarcará 2 columnas */
   grid-row: span 2; /* La imagen seleccionada abarcará 2 filas */
@@ -87,9 +95,9 @@
 
 
 .card h3{
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin: 0;
-  padding: 0 20px;
+  padding: 0px  30px 0px 20px;
   color: #ff6347;
   text-align: center;
   text-shadow: #333;
@@ -99,7 +107,7 @@
   z-index: 10;
 }
 .card p{
-  font-size: 1rem;
+/*   font-size: 1rem; */
   margin: 0;
   padding: 0 20px;
   color: #333;
@@ -108,13 +116,13 @@
   font-weight: 400;
   line-height: 1.5;
   text-transform: none;
-
+  
 } 
 
 /* Estilos para el botón de cierre */
 .card button {
   margin: 0 auto;
-  padding: 5% 10%;
+  padding: 5% 25%;
   background-color: #ff6347; /* Color fuerte para el botón */
   color: white;
   border: none;
@@ -122,6 +130,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   object-position: center;
+  font-family: 'Gotham Light', sans-serif;
 }
 
 .card button:hover {

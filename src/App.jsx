@@ -71,6 +71,7 @@ function App() {
 
   return (
     <>
+    <div className="contenedor">
     <div className="galeria">
       {imagenes.map((imagen) => (
         <div
@@ -83,6 +84,7 @@ function App() {
           {showCard && selectedImage === imagen.id && <Card imagen={imagen.src} onClose={handleMouseLeave} />}
         </div>
       ))}
+    </div>
     </div>
   </>
   );
